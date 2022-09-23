@@ -3,13 +3,13 @@ const conf = require("../../botconfig/config.json");
 
 exports.run = async (client, message, args) => {
   let uwu = client.user;
-  let prefix = "uwu ";
+  let prefix = conf.prefix;
   let argm = args[0];
   if (!argm)
     return message.channel.send(
       new Discord.MessageEmbed()
         .setDescription(
-          `Here is the list of commands!\nFor more info on a specific command, use \`${prefix}help {command}\`\nNeed more help? Come join our [guild](https://discord.gg/vN6JFKcVxc)\nCommands count: **${client.commands.size}**`
+          `Here is the list of commands!\nFor more info on a specific command, use \`${prefix} help {command}\`\nNeed more help? Come join our [guild](https://discord.gg/vN6JFKcVxc)\nCommands count: **${client.commands.size}**`
         )
         .setColor("BLUE")
         .addField(`:money_with_wings: **Economy**`, "`money`, `daily`, `coinflip`, `pray`, `give`")

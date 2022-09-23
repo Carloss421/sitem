@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const conf = require("../../botconfig/config.json");
 const moment = require("moment");
 moment.locale("tr");
 require("moment-duration-format");
@@ -13,7 +14,7 @@ exports.run = async (client, message, args) => {
   let channelsCount = client.channels.cache.array().length;
   let ping = client.ws.ping;
   let uptime = moment.duration(client.uptime).format("D [days], H [hours], m [minutes], s [seconds]");
-  let prefix = "uwu ";
+  let prefix = conf.prefix;
   let botstats = new Discord.MessageEmbed()
   .setAuthor(bot.username + " Information", bot.displayAvatarURL({dynamic:true}))
   .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=${bot.id}&permissions=444480&scope=bot`)

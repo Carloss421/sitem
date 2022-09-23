@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
   }
     let praypoint = rastgeleMiktar(1,2);
     let pray = db.fetch(`praypuan.${message.author.id}`);
-    message.channel.send(`:pray: **| ${message.author.username}** prays... Fortune favors you!\n<:head:823557996604948571> **|** You have **${pray || 0}** luck point(s)!`);
+    message.channel.send(`:pray: **| ${message.author.username}** prays... Fortune favors you!\n  **|** You have **${pray || 0}** luck point(s)!`);
   db.add(`praypuan.${message.author.id}`, praypoint)
   db.set(`prayoynama_${message.author.id}`, Date.now());
 };

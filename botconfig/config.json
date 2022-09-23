@@ -5,8 +5,8 @@
     "prefix1": "deneme",
     "prefix2": "abone",
     "prefix3": "cc",
-    "shardCount": "",
-    "footer": "",
+    "shardCount": "5",
+    "footer": "deneme",
     "invitemsg": "deneme",
     "reportlog": "1020939397052502026"
 }
