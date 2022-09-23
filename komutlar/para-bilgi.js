@@ -15,7 +15,7 @@ exports.conf = {
   aliases: [],
   permLevel: 0
 };
-//HAZIRLAYANLAR Clearly_ , FORCEX ogün Sert
+
 exports.help = {
   name: 'para'
 };

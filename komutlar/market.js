@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   
   if (args[0] === 'sa') {
     let para = await db.get(`para_${message.author.id}`) 
-    let fiyatcık = 100 // istediğiniz fiyat
+    let fiyatcık = 0 // istediğiniz fiyat
     
     if (para < fiyatcık) return message.reply('Yeterli Paran Yok!')
     

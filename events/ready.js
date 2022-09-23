@@ -8,7 +8,7 @@ var prefix= ayarlar.prefix;
 module.exports = client => {
   console.log(`${client.guilds.size} Kadar Sunucuya Hizmet Veriyorum!`);
   client.user.setStatus("online");
-  client.user.setActivity("Kobs Code Ekonomi", { type: "WATCHING" });
+  client.user.setActivity("Airfax Ekonomi", { type: "WATCHING" });
   
 
   
