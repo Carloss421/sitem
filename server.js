@@ -126,4 +126,4 @@ client.on("guildCreate", async (guild, message, role, member) => {
     console.log(`✅ | ${guild.name} (${guild.id}) named server's premium is de-active.`)
 });
 
-client.login(conf.token);
+client.login(process.env.token);
