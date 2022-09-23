@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const ayar = require("../ayarlar.json")
 
 
 exports.run = async (client, message, args) => {
@@ -6,12 +7,12 @@ exports.run = async (client, message, args) => {
   
 const istatistikler = new Discord.MessageEmbed()
   .addField(`:scroll: »  Pingim` ,`${client.ws.ping}ms`,true)
-  .addField(`:incoming_envelope: » Yapımcım` ,`OgünSert Kob's#0001`,true)
+  .addField(`:incoming_envelope: » Yapımcım` ,`<@${ayar.sahip}>`,true)
   .addField(`:label: » Node.js`, `${process.version}`, true)
  .addField(`:bar_chart: » Kanal Sayısı`, `${client.channels.cache.size  }`, true)
  .addField(`:postbox: » Kullanıcı Sayısı`, `${client.users.cache.size}`, true)
  .addField(`:envelope: » Sunucu Sayısı`, `${client.guilds.cache.size}`, true)
- .addField(`» Linkler`, `[Destek Sunucusu](https://discord.gg/NP7Ar2j) | [Youtube](https://www.youtube.com/ogünsertkobs)`, true)
+ .addField(`» Linkler`, `[Destek Sunucusu](${ayar.desteksunucu}) | [Youtube](${ayar.youtubeURL})`, true)
   message.channel.send(istatistikler)
   
   
