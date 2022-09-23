@@ -1,45 +1,45 @@
-const Discord = require("discord.js");
+const Discord = require("discord.js");////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
 const client = new Discord.Client();
 const database = require("quick.db");
-const fs = require("fs");
+const fs = require("fs");////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
 const conf = require("./botconfig/config.json");
 require("./modules/eventLoader.js")(client);
 let bot = client.user;
 
-client.on("ready", () => {
+client.on("ready", () => {////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
     console.log(`[BOT]: Logged in as ${client.user.tag}`)
     client.user.setPresence({ 
         activity: { 
             name: `${client.guilds.cache.array().length} servers!`, 
-            type: "PLAYING"
+            type: "PLAYING"////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
         }, 
         status: "online"
     });
-});
+});////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir("./commands/economy", (err, files) => {
   if (err) console.error(err);
   console.log(`[ECONOMY]: ${files.length} command will load.`);
-  files.forEach(f => {
+  files.forEach(f => {////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
     let props = require(`./commands/economy/${f}`);
     console.log(`[ECONOMY]: ${props.config.name} named command loaded.`);
-    client.commands.set(props.config.name, props);
+    client.commands.set(props.config.name, props);////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
     props.config.aliases.forEach(alias => {
       client.aliases.set(alias, props.config.name);
     });
-  });
+  });////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
 });
 
 fs.readdir("./commands/mod", (err, files) => {
     if (err) console.error(err);
     console.log(`[MOD]: ${files.length} command will load.`);
-    files.forEach(f => {
+    files.forEach(f => {////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
       let props = require(`./commands/mod/${f}`);
       console.log(`[MOD]: ${props.config.name} named command loaded.`);
       client.commands.set(props.config.name, props);
-      props.config.aliases.forEach(alias => {
+      props.config.aliases.forEach(alias => {////Airfax Youtube Kanalından Alınmıştır Paylaşılması Yasaktır.
         client.aliases.set(alias, props.config.name);
       });
     });
