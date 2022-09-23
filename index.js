@@ -46,7 +46,7 @@ let clusters = 60;
 		console.log("Creating shards "+firstShardID+"~"+lastShardID+" out of "+shards+" total shards!");
 
 		// Start sharder
-		const sharder = new Sharder("Bot "+process.env.BOT_TOKEN, config.sharder.path, {
+		const sharder = new Sharder("Bot "+process.env.TOKEN, config.sharder.path, {
 			name: config.sharder.name,
 			clientOptions: config.eris.clientOptions,
 			debug:true,
